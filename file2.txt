@@ -2,4 +2,5 @@
 2nd line in feature branch
 3rd line in the file
 4th line in feature2 branch
+5th line in feature2 branch
 

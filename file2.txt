@@ -1,2 +1,4 @@
 1st file in feature branch
 2nd line in feature branch
+3rd line in the file
+

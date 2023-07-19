@@ -17,5 +17,5 @@ jobs:
     - name: message display
       run: echo "Work flow started"
     - name: github context
-      run: echo "${{toJSON(github)}}"
+      run: echo "${{ toJSON(github) }}"
 

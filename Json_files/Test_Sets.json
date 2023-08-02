@@ -1,0 +1,49 @@
+{
+  "metaData": {
+    "preCheck": true,
+    "preCheck.suspectedLinks": false,
+    "containMixedTestAutomationContent": false,
+    "fullyAutomated": false
+  },
+  "testCaseSet": [
+    {
+      "id": 3553474,
+      "name": "TestCase_1",
+      "status": "Draft",
+      "version": 17,
+      "parameterTests": 0,
+      "forCredit": false,
+      "comment": "The test case is not in status accepted!",
+      "automated": false
+    },
+    {
+      "id": 3553469,
+      "name": "TestCase_2",
+      "status": "Draft",
+      "version": 9,
+      "parameterTests": 0,
+      "forCredit": false,
+      "comment": "The test case is not in status accepted!",
+      "automated": false
+    }
+  ],
+  "runConfigurations": [
+    {
+      "id": 3128805,
+      "name": "mock1-ALM_Connector_Project_Config",
+      "description": "",
+      "createdBy": "dog46ju"
+    }
+  ],
+  "executionList": [
+    "3553474",
+    "3553469"
+  ],
+  "baselineId": 0,
+  "projectId": 547,
+  "projectName": "Central Integration Playground",
+  "trackerName": "Test Procedure Specification",
+  "id": 3123563,
+  "name": "NetworkingSysLevelEthAnalysisActivecomm",
+  "description": "TestSet~_1",
+}

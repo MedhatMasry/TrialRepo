@@ -3,7 +3,7 @@ import json
 import requests
 
 
-def get_test_set_ids(path):
+def get_test_set_campaign_name_and_ids(path):
     # open json file
     # for simplicity I will consider that the test file already downloaded in specific path.
     with open(path, 'r',encoding='utf-8') as test_file:
@@ -24,9 +24,9 @@ def get_test_set_ids(path):
        # test_id_list.append(test_set["id"])
 
     #for testing, print the test case ids         
-    print(f'Test-Case-Set-List of "{path}"= {[int(i) for i in content["executionList"]]}')
+    #print(f'Test-Case-Set-List of "{path}"= {[int(i) for i in content["executionList"]]}')
      #for testing, print the test case ids         
-    print(f'Campaign_Name= {content["name"]}')
+    #print(f'Campaign_Name= {content["name"]}')
     
     return content["name"],content["executionList"]
     
@@ -36,6 +36,6 @@ if __name__ == "__main__":
   if len(sys.argv)==1:
     print("Test file must be provided")
   else:
-    returned=get_test_set_ids(sys.argv[1])
+    returned=get_test_set_campaign_name_and_ids(sys.argv[1])
     print(f'returned name={returned[0]}')
     print(f'returned ids={returned[1][0]} {returned[1][1]}')

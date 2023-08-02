@@ -13,6 +13,5 @@ jobs:
         
       - name: Run data extractor 
         run: |
-          cd /Python_Scripts
-          python Extract_Data_From_Json.py --../Json_files/Test_Sets.json
+          python Python_Scripts/Extract_Data_From_Json.py --Json_files/Test_Sets.json
          

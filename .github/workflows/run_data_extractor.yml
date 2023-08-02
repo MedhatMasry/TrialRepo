@@ -14,5 +14,5 @@ jobs:
       - name: Run data extractor 
         run: |
           cd /Python_Scripts
-          python Extract_Data_From_Json.py --${{ github.action_path }}/Json_files/Test_Sets.json
+          python Extract_Data_From_Json.py --../Json_files/Test_Sets.json
          

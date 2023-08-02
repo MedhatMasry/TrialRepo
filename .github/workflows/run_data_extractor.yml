@@ -13,7 +13,7 @@ jobs:
         
       - name: Run data extractor
         env:
-            JSON_FILE_PATH: ${{.github/Json_files/Test_Sets.json}}
+            JSON_FILE_PATH: ${{ github.action_path }}/Json_files/Test_Sets.json
         run: |
           cd /Python_Scripts
           python Extract_Data_From_Json.py --${{ JSON_FILE_PATH }}

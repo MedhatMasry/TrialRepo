@@ -7,3 +7,11 @@ on:
         description: 'The path to a json file'
         required: false
         type: string
+
+
+jobs:
+  trigger-trace-analyzer-workflow:
+    runs-on: windows_latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3

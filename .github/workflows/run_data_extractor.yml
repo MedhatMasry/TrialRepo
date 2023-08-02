@@ -13,6 +13,11 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Run data extractor 
+        id: Run_data_extractor 
         run: |
-          python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json
+          "python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json"
+      - name: print the result of the previous step 
+        id: print_result
+        run: |
+          echo "${{github.steps.Run_data_extractor.output}}"
          

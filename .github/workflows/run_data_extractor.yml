@@ -2,11 +2,6 @@ name: run data extractor
 
 on:
   workflow_dispatch:
-    inputs:
-      json_file_path:
-        description: 'The path to a json file'
-        required: false
-        type: string
 
 
 jobs:

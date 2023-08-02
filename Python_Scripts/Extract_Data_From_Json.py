@@ -37,5 +37,5 @@ if __name__ == "__main__":
     print("Test file must be provided")
   else:
     returned=get_test_set_campaign_name_and_ids(sys.argv[1])
-    print(f'returned name={returned[0]}')
-    print(f'returned ids={returned[1][0]} {returned[1][1]}')
+    print(f'Compaign_Name= {returned[0]}')
+    print(f'test_set_ids= {returned[1][0]} {returned[1][1]}')

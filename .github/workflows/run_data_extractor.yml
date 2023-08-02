@@ -11,10 +11,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
         
-      - name: Run data extractor
-        env:
-            JSON_FILE_PATH: ${{ github.action_path }}/Json_files/Test_Sets.json
+      - name: Run data extractor 
         run: |
           cd /Python_Scripts
-          python Extract_Data_From_Json.py --${{ JSON_FILE_PATH }}
+          python Extract_Data_From_Json.py --${{ github.action_path }}/Json_files/Test_Sets.json
          

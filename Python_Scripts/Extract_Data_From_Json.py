@@ -14,8 +14,12 @@ def get_campaign_name_and_ids(path):
       data = test_file.read()
     # load json file
     content = json.loads(data)
-    set_output('value1',content["name"])
-    set_output('value2',content["executionList"])
+    set_output('campaign_name',content["name"])
+    set_output('id_list',content["executionList"])
+    set_output('test_set_id',content["id"])
+    #set_output('trace_file_path',content["executionList"])
+    #set_output('test_set_file_path',content["executionList"])
+    
     
     return content["name"],content["executionList"]
     

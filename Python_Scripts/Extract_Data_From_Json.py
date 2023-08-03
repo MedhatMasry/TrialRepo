@@ -3,6 +3,10 @@ import json
 import os
 
 
+def set_output(name, value):
+    with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+        print(f'{name}={value}', file=fh)
+
 def get_campaign_name_and_ids(path):
     # open json file
     # for simplicity I will consider that the test file already downloaded in specific path.
@@ -32,13 +36,7 @@ def get_campaign_name_and_ids(path):
     #print(f'::set-output name=value1::{content["name"]}')
     #print(f'::set-output name=value2::{content["executionList"]}')
 
-    name='value1'
-    value=content["executionList"]
-    with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-        print('{name}={value}', file=fh)
-
-    with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-        print('value2=key_script', file=fh)
+    set_output(value1,content["name"])
     
     return content["name"],content["executionList"]
     

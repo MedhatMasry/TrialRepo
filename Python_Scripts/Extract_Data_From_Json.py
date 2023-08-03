@@ -21,7 +21,7 @@ def get_campaign_name_and_ids(path):
     #set_output('test_set_file_path',content["executionList"])
     
     
-    return content["name"],content["executionList"]
+    return content["name"], content["executionList"], content["id"]
     
     
    
@@ -29,6 +29,4 @@ if __name__ == "__main__":
   if len(sys.argv)==1:
     print("Test file must be provided")
   else:
-    returned=get_campaign_name_and_ids(sys.argv[1])
-    print(f'Compaign_Name= {returned[0]}')
-    print(f'test_set_ids= {returned[1][0]} {returned[1][1]}')
+    get_campaign_name_and_ids(sys.argv[1])

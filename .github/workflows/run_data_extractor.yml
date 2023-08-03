@@ -19,6 +19,6 @@ jobs:
       - name: use output
         id: use_output
         run: |
-          echo "${{ steps.vars.outputs.Run_data_extractor }}"
+          echo "${{ .github.steps.outputs.Run_data_extractor }}"
           
          

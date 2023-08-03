@@ -3,7 +3,7 @@ import json
 import requests
 
 
-def main(path):
+def main(path) -> list():
     # open json file
     # for simplicity I will consider that the test file already downloaded in specific path.
     with open(path, 'r',encoding='utf-8') as test_file:

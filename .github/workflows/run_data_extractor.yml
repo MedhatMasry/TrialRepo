@@ -17,7 +17,8 @@ jobs:
       - name: Run data extractor
         id: Run_data_extractor
         run: |
-          python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json
+          output=$(python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json)
+          echo "::set-output name=CN_IDs::$output"
       - name: use output
         id: use_output
         run: |

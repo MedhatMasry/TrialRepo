@@ -15,10 +15,10 @@ jobs:
       - name: Run data extractor
         id: Run_data_extractor
         run: |
-          echo "result=python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json" >> $GITHUB_OUTPUT
+          python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json
       - name: use output
         id: use_output
         run: |
-          echo "${{ steps.vars.outputs.Run_data_extractor.result }}"
+          echo "${{ steps.vars.outputs.Run_data_extractor }}"
           
          

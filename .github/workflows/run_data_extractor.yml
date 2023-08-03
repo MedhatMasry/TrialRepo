@@ -19,6 +19,6 @@ jobs:
       - name: use output
         id: use_output
         run: |
-          echo ${{ github.env }}
+          echo ${{ github.steps.Run_data_extractor }}
           
          

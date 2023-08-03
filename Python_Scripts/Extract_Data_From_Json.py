@@ -36,7 +36,7 @@ def get_campaign_name_and_ids(path):
     #print(f'::set-output name=value1::{content["name"]}')
     #print(f'::set-output name=value2::{content["executionList"]}')
 
-    set_output(value1,content["name"])
+    set_output('value1',content["name"])
     
     return content["name"],content["executionList"]
     

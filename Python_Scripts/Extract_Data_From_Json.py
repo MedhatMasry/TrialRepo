@@ -39,4 +39,3 @@ if __name__ == "__main__":
     returned=main(sys.argv[1])
     print(f'Compaign_Name= {returned[0]}')
     print(f'test_set_ids= {returned[1][0]} {returned[1][1]}')
-    return returned

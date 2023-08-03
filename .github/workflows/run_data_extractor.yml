@@ -15,8 +15,9 @@ jobs:
       - name: Write output
         id: write_output
         run: |          
-          echo "value1=key1" >> "$GITHUB_OUTPUT"
-          echo "value2=key2" >> "$GITHUB_OUTPUT"
+          echo "campaign_name=key1" >> "$GITHUB_OUTPUT"
+          echo "id_list=key2" >> "$GITHUB_OUTPUT"
+          echo "test_set_id=key3" >> "$GITHUB_OUTPUT"
           
       - name: Run data extractor
         id: Run_data_extractor
@@ -25,7 +26,8 @@ jobs:
           
       - name: Read output from script
         run: |
-          echo "VAL1: ${{ steps.Run_data_extractor.outputs.value1 }}"
-          echo "VAL2: ${{ steps.Run_data_extractor.outputs.value2 }}"
+          echo "campaign_name: ${{ steps.Run_data_extractor.outputs.campaign_name }}"
+          echo "id_list: ${{ steps.Run_data_extractor.outputs.id_list }}"
+          echo "id_list: ${{ steps.Run_data_extractor.outputs.test_set_id }}"
           
          

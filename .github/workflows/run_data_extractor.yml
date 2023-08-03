@@ -17,12 +17,12 @@ jobs:
       - name: Run data extractor
         id: Run_data_extractor
         run: |
-          output=$(python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json)
-          echo "::set-output name=CN_IDs::$output"
-          echo "{CN_IDs}={output}" >> $GITHUB_OUTPUT
-      - name: use output
-        id: use_output
+          python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json
+          echo "value1=key1" >> "$GITHUB_OUTPUT"
+          echo "value2=key2" >> "$GITHUB_OUTPUT"
+      - name: Read output from script
         run: |
-          echo ${{ steps.Run_data_extractor.CN_IDs }}
+          echo "VAL1: ${{ steps.write_output_from_script.outputs.value1 }}"
+          echo "VAL2: ${{ steps.write_output_from_script.outputs.value2 }}"
           
          

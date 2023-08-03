@@ -23,16 +23,17 @@ jobs:
         id: Run_data_extractor
         run: |
           python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json
+          env:
+           CAMPAIGN_NAME = ${{ steps.Run_data_extractor.outputs.campaign_name }}"
+           ID_LIST = ${{ steps.Run_data_extractor.outputs.id_list }}"
+           TEST_SET_ID = ${{ steps.Run_data_extractor.outputs.test_set_id }}"
           
       - name: Read output from script
         run: |
           echo "campaign_name: ${{CAMPAIGN_NAME }}"
           echo "id_list: ${{ID_LIST}}"
           echo "test_set_id: ${{TEST_SET_ID }}"
-          env:
-           CAMPAIGN_NAME = ${{ steps.Run_data_extractor.outputs.campaign_name }}"
-           ID_LIST = ${{ steps.Run_data_extractor.outputs.id_list }}"
-           TEST_SET_ID = ${{ steps.Run_data_extractor.outputs.test_set_id }}"
+
            
           
          

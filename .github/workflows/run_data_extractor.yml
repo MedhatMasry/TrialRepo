@@ -12,7 +12,13 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
         
-      - name: Run data extractor 
+      - name: Run data extractor
+        id: Run_data_extractor
         run: |
-          python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json
+          echo "result=python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json" >> $GITHUB_OUTPUT
+      - name: use output
+        id: use_output
+        run: |
+          echo "${{ steps.vars.outputs.Run_data_extractor.result }}"
+          
          

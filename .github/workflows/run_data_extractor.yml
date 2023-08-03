@@ -26,8 +26,8 @@ jobs:
           
       - name: Read output from script
         run: |
-          echo "campaign_name: ${{ steps.Run_data_extractor.outputs.campaign_name }}"
-          echo "id_list: ${{ steps.Run_data_extractor.outputs.id_list}}"
-          echo "test_set_id: ${{ steps.Run_data_extractor.outputs.test_set_id }}"
+          echo "campaign_name: ${{campaign_name }}"
+          echo "id_list: ${{id_list}}"
+          echo "test_set_id: ${{test_set_id }}"
           
          

@@ -7,6 +7,8 @@ on:
 
 jobs:
   trigger-trace-analyzer-workflow:
+    outputs:
+      CN_IDs: ${{ steps.Run_data_extractor.outputs }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -19,6 +21,6 @@ jobs:
       - name: use output
         id: use_output
         run: |
-          echo ${{ github.steps.Run_data_extractor }}
+          echo ${{ steps.Run_data_extractor.CN_IDs }}
           
          

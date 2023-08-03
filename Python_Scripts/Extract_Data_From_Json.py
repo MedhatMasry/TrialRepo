@@ -32,7 +32,7 @@ def get_campaign_name_and_ids(path):
     print(f'::set-output name=value1::{content["name"]}')
     print(f'::set-output name=value2::{content["executionList"]}')
     with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-        print({value1}={content["name"]}, file=fh)
+        print(value1={content["name"]}, file=fh)
     
     return content["name"],content["executionList"]
     

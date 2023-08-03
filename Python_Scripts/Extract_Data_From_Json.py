@@ -12,6 +12,8 @@ def get_campaign_name_and_ids(path):
     # for simplicity I will consider that the test file already downloaded in specific path.
     with open(path, 'r',encoding='utf-8') as test_file:
       data = test_file.read()
+    # load json file
+    content = json.loads(data)
     set_output('value1',content["name"])
     set_output('value2',content["executionList"])
     

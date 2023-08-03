@@ -19,6 +19,7 @@ jobs:
         run: |
           output=$(python Python_Scripts/Extract_Data_From_Json.py Json_files/Test_Sets.json)
           echo "::set-output name=CN_IDs::$output"
+          echo "{CN_IDs}={output}" >> $GITHUB_OUTPUT
       - name: use output
         id: use_output
         run: |

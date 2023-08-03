@@ -25,7 +25,7 @@ jobs:
           
       - name: Read output from script
         run: |
-          echo "VAL1: ${{ steps.write_output.outputs.value1 }}"
-          echo "VAL2: ${{ steps.write_output.outputs.value2 }}"
+          echo "VAL1: ${{ steps.Run_data_extractor.outputs.value1 }}"
+          echo "VAL2: ${{ steps.Run_data_extractor.outputs.value2 }}"
           
          

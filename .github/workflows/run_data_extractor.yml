@@ -7,14 +7,12 @@ on:
 
 jobs:
   trigger-trace-analyzer-workflow:
-    outputs:
-      CN_IDs: ${{ steps.Run_data_extractor.outputs }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-
-     - name: Write output
+        
+      - name: Write output
         id: write_output
         run: |          
           echo "value1=key1" >> "$GITHUB_OUTPUT"

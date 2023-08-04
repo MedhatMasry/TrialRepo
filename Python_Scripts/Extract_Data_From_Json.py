@@ -11,7 +11,7 @@ def set_output(name, value):
 def get_test_set_campaign_name_and_ids(test_set_path:str):
     # open json file
     # for simplicity I will consider that the test file already downloaded in specific path.
-    with open(path, 'r',encoding='utf-8') as test_file:
+    with open(test_set_path, 'r',encoding='utf-8') as test_file:
       data = test_file.read()
     # load json file
     content = json.loads(data)

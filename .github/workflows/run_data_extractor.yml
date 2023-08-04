@@ -15,7 +15,7 @@ jobs:
       - name: Run data extractor
         id: Run_data_extractor
         run: |
-          python Python_Scripts/Extract_Data_From_Json.py \
+          python Python_Scripts/Extract_Data_From_Json.py
           Json_files/Test_Sets.json
           
       - name: Read output from script

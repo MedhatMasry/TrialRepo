@@ -1,6 +1,7 @@
 import sys
 import json
 import os
+import argparse
 
 
 def set_output(name, value):
@@ -26,7 +27,14 @@ def get_campaign_name_and_ids(path):
     
    
 if __name__ == "__main__":
-  if len(sys.argv)==1:
-    print("Test file must be provided")
-  else:
-    get_campaign_name_and_ids(sys.argv[1])
+    parser = argparse.ArgumentParser(
+        description="The script helps to set the prerequisites for the Offline TraceAnalyzer tool."
+    )
+    parser.add_argument(
+        "--test_set_path",
+        "-t1",
+        help="a path to the test file.",
+    )
+    args = parser.parse_args()
+    # pass the input arguments to main script.
+    main(args.test_set_path)

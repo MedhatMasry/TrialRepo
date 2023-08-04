@@ -8,7 +8,7 @@ def set_output(name, value):
     with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
         print(f'{name}={value}', file=fh)
 
-def get_campaign_name_and_ids(path):
+def main(path):
     # open json file
     # for simplicity I will consider that the test file already downloaded in specific path.
     with open(path, 'r',encoding='utf-8') as test_file:

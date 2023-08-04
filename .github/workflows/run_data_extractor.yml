@@ -2,7 +2,11 @@ name: run data extractor
 
 on:
   workflow_dispatch:
-  push:
+   inputs:
+    test_set_path:
+        description: 'The path to a test set file'
+        required: false
+        type: string
 
 
 jobs:
@@ -15,8 +19,7 @@ jobs:
       - name: Run data extractor
         id: Run_data_extractor
         run: |
-          python Python_Scripts/Extract_Data_From_Json.py \
-          Json_files/Test_Sets.json
+          python Python_Scripts/Extract_Data_From_Json.py --test_set_path=${{ inputs.test_set_path }}
           
       - name: Read output from script
         run: |

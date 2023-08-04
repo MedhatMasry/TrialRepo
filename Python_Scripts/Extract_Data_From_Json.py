@@ -8,7 +8,7 @@ def set_output(name, value):
     with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
         print(f'{name}={value}', file=fh)
 
-def main(path):
+def get_test_set_campaign_name_and_ids(test_set_path:str):
     # open json file
     # for simplicity I will consider that the test file already downloaded in specific path.
     with open(path, 'r',encoding='utf-8') as test_file:
@@ -23,8 +23,9 @@ def main(path):
     
     
     return content["name"], content["executionList"], content["id"]
-    
-    
+
+def main(test_set_path:str):
+   get_test_set_campaign_name_and_ids(test_set_path)    
    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -38,3 +39,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     # pass the input arguments to main script.
     main(args.test_set_path)
+
+

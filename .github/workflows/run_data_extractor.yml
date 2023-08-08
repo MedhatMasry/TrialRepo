@@ -15,7 +15,7 @@ jobs:
     strategy: 
       matrix:
         operating-systems: [windows-latest, windows-latest]
-    runs-on: ${{ matrix.operating-systems}}
+    runs-on: windows-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3

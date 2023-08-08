@@ -11,10 +11,6 @@ on:
 
 jobs:
   trigger-data-extractor-workflow:
-    continue-on-error: true
-    strategy: 
-      matrix:
-        operating-systems: [windows-latest, windows-latest]
     runs-on: windows-latest
     steps:
       - name: Check out repository code

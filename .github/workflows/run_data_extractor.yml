@@ -11,7 +11,11 @@ on:
 
 jobs:
   trigger-data-extractor-workflow:
-    runs-on: windows-latest
+    continue-on-error: true
+    strategy: 
+      matrix:
+        operating-systems: [windows-latest, windows-latest]
+    runs-on: ${{ matrix.operating-systems }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3

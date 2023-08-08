@@ -14,7 +14,7 @@ jobs:
     continue-on-error: true
     strategy: 
       matrix:
-        operating-systems: [windows-latest, ubuntu-latest]
+        operating-systems: [windows-latest, windows-latest]
     runs-on: ${{ matrix.operating-systems}}
     steps:
       - name: Check out repository code

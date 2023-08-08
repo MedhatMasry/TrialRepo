@@ -10,7 +10,8 @@ on:
 
 
 jobs:
-  trigger-trace-analyzer-workflow:
+  trigger-data-extractor-workflow:
+    continue-on-error: true
     strategy: 
       matrix:
         operating-systems: [windows-latest, ubuntu-latest]

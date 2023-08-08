@@ -30,6 +30,9 @@ jobs:
           echo "campaign_name:${{ steps.Run_data_extractor.outputs.campaign_name }}"
           echo "id_list:${{ steps.Run_data_extractor.outputs.id_list }}"
           echo "test_set_id:${{ steps.Run_data_extractor.outputs.test_set_id }}"
+  
+  Dummy_job:
+   uses: ./.github/workflows/reusable_workflow.yml
 
            
           

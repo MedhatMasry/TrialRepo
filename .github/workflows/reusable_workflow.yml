@@ -1,0 +1,9 @@
+name: reusable workflow
+on: workflow_call
+jobs:
+    Print_dummy_message:
+     runs-on: ubuntu-latest
+     steps:
+      - name: dummy step
+        run: |
+         echo "I'm dummy job in dumy workflow"

@@ -34,7 +34,7 @@ jobs:
       - name: Determine file name using its extention
         id: file_name_get
         run: |
-          echo "artifact_path=$(dir results/test_results/*.xml)" >> "$GITHUB_OUTPUT"
+          echo "artifact_path=$(dir results/test_results/*.xml -n)" >> "$GITHUB_OUTPUT"
           echo "PATH=$(ls results/test_results | grep nunit.xml)" >> "$GITHUB_OUTPUT"
           
 

@@ -36,7 +36,7 @@ jobs:
         run: |
           echo "artifact_path=$(dir results/test_results/*.xml)" >> "$GITHUB_OUTPUT"
         env:
-          TEMP_VAR: $(dir results/test_results/*.xml)
+          TEMP_VAR: dir results/test_results/*.xml
           
 
       - name: Determine file name using its extention

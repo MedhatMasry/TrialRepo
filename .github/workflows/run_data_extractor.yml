@@ -34,7 +34,7 @@ jobs:
       - name: Determine file name using its extention
         id: file_name_get
         run: |
-          echo "artifact_path=$(dir results/test_results)" >> "$GITHUB_OUTPUT"
+          echo "artifact_path=$(dir results/test_results/*.xml)" >> "$GITHUB_OUTPUT"
 
       - name: Determine file name using its extention
         run: |

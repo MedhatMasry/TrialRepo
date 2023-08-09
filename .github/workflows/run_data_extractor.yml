@@ -35,13 +35,13 @@ jobs:
         id: file_name_get
         run: |
           echo "artifact_path=$(dir results/test_results/*.xml)" >> "$GITHUB_OUTPUT"
-        env:
-          TEMP_VAR: dir results/test_results/*.xml
+          echo "PATH=$(ls results/test_results | grep nunit.xml)" >> "$GITHUB_OUTPUT"
           
 
       - name: Determine file name using its extention
         run: |
           echo "artifact_path=${{ steps.file_name_get.outputs.artifact_path}}"
+          echo "artifact_path2=${{ steps.file_name_get.outputs.PATH}}"
           
           
          

@@ -34,12 +34,15 @@ jobs:
       - name: Determine file name using its extention
         id: file_name_get
         run: |
+          export PATH="$(dir results/test_results/*.xml)"
           echo "artifact_path=$(dir results/test_results/*.xml)" >> "$GITHUB_OUTPUT"
-          curl -i "https://api.github.com/repos/vnation/NewsAggregator/contents/.xml"
+          
 
       - name: Determine file name using its extention
         run: |
           echo "artifact_path=${{ steps.file_name_get.outputs.artifact_path}}"
+          echo "PATH= ${{steps.file_name_get.outputs.PATH}}"
+          
           
          
   

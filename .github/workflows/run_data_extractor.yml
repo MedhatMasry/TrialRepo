@@ -34,11 +34,12 @@ jobs:
       - name: Determine file name using its extention
         id: file_name_get
         run: |
-          echo "artifact_path=$(ls results\test_results | grep nunit.xml)" >> "$GITHUB_OUTPUT"
+          echo "artifact_path= Medhat/Eid/Masry" >> "$GITHUB_OUTPUT"
 
       - name: Determine file name using its extention
         run: |
           echo "artifact_path=${{ steps.file_name_get.outputs.artifact_path}}"
+          
          
   
   Dummy_job:

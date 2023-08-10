@@ -46,6 +46,7 @@ jobs:
          
   
   Dummy_job:
+   needs: Run-Data-Extractor
    uses: ./.github/workflows/reusable_workflow.yml
 
            

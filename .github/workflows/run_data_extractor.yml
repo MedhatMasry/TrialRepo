@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  trigger-data-extractor-workflow:
+  Run-Data-Extractor:
     continue-on-error: true
     strategy: 
       matrix:
@@ -31,17 +31,16 @@ jobs:
           echo "id_list:${{ steps.Run_data_extractor.outputs.id_list }}"
           echo "test_set_id:${{ steps.Run_data_extractor.outputs.test_set_id }}"
 
-      - name: Determine file name using its extention
-        id: file_name_get
+      - name: Determine file path using its extention
+        id: file_path_get
         run: |
-          echo "artifact_path=$(dir results/test_results/*.xml -n)" >> "$GITHUB_OUTPUT"
+          echo "artifact_path=$(dir results/test_results/*.xml)" >> "$GITHUB_OUTPUT"
           echo "PATH=$(ls results/test_results | grep nunit.xml)" >> "$GITHUB_OUTPUT"
           
-
-      - name: Determine file name using its extention
+      - name: Display file path
         run: |
-          echo "artifact_path=${{ steps.file_name_get.outputs.artifact_path}}"
-          echo "artifact_path2=${{ steps.file_name_get.outputs.PATH}}"
+          echo "artifact_path=${{ steps.file_path_get.outputs.artifact_path}}"
+          echo "artifact_path2=${{ steps.file_path_get.outputs.PATH}}"
           
           
          

@@ -42,8 +42,7 @@ jobs:
           echo "artifact_path=${{ steps.file_path_get.outputs.artifact_path}}"
           echo "artifact_path2=${{ steps.file_path_get.outputs.PATH}}"
           echo "artifact_path3= ${{ steps.file_path_get.outputs.PATH}}"
-          
-         
+          echo "artifact_path4=${{ steps.file_path_get.outputs.PATH}}"      
   
   Dummy_job:
    needs: Run-Data-Extractor

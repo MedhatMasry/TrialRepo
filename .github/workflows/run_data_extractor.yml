@@ -13,7 +13,7 @@ jobs:
     continue-on-error: true
     strategy: 
       matrix:
-        operating-systems: [windows-latest, ubuntu-latest, macos-latest]
+        operating-systems: [windows-latest, ubuntu-latest]
     runs-on: ${{ matrix.operating-systems }}
     steps:
       - name: Check out repository code
@@ -50,6 +50,7 @@ jobs:
 
   use_artifact_from_another_workflow:
    runs-on: ubuntu-latest
+   needs: Dummy_job
    steps:
    - name: clone repo
      uses: actions/checkout@v3

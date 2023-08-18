@@ -1,3 +1,4 @@
+name: Data Extractor
 
 on:
   workflow_dispatch:

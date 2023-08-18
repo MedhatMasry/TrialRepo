@@ -4,6 +4,12 @@ jobs:
     Print_dummy_message:
      runs-on: ubuntu-latest
      steps:
-      - name: dummy step
+      - name: add dummy data to artifact
         run: |
-         echo "I'm dummy job in dumy workflow"
+         echo "I'm dummy data in an artifact" >> artifact.txt
+
+      - name: upload the artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: upload-dummy-artifact
+          path: artifacts.txt

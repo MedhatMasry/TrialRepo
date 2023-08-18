@@ -49,7 +49,7 @@ jobs:
    uses: ./.github/workflows/reusable_workflow.yml
 
   use_artifact_from_another_workflow:
-   runs-on: ubuntu-latest
+   runs-on: windows-latest
    needs: Dummy_job
    steps:
    - name: clone repo

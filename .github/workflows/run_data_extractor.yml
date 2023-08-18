@@ -58,4 +58,4 @@ jobs:
    - name: download artifact
      uses: actions/download-artifact@v3
      with:
-       name: dummy-artifactname
+       name: dummy-artifact

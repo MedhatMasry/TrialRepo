@@ -11,5 +11,5 @@ jobs:
       - name: upload the artifact
         uses: actions/upload-artifact@v3
         with:
-          name: upload-dummy-artifact
-          path: artifacts.txt
+          name: dummy-artifact
+          path: artifact.txt

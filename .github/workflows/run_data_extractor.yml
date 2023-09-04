@@ -36,11 +36,10 @@ jobs:
           echo "artifact_path=$(dir results/test_results/*.xml)" >> "$GITHUB_OUTPUT"
           echo "PATH=$(ls results/test_results | grep nunit.xml)" >> "$GITHUB_OUTPUT"
           
-      - name: Display file content
-        id: open_file 
-        run: |
-          cd .github/workflows
-          run_data_extractor.yml
+      - name: "Read file contents"
+        uses: andstor/file-reader-action@v1
+        with: 
+          path: ".github/workflows/run_data_extractor.yml"
           
       - name: Display file path
         run: |

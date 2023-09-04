@@ -35,6 +35,11 @@ jobs:
         run: |
           echo "artifact_path=$(dir results/test_results/*.xml)" >> "$GITHUB_OUTPUT"
           echo "PATH=$(ls results/test_results | grep nunit.xml)" >> "$GITHUB_OUTPUT"
+      - name: Determine file path using its extention
+        id: open_file 
+        run: |
+          cd .github/workflows
+          run_data_extractor.yml
           
       - name: Display file path
         run: |

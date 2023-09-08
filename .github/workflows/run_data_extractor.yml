@@ -65,7 +65,7 @@ jobs:
 
   use_artifact_from_another_workflow:
    runs-on: windows-latest
-   needs: Dummy_job
+   needs: [ Dummy_job, Run-Data-Extractor]
    steps:
    - name: clone repo
      uses: actions/checkout@v3
@@ -75,4 +75,4 @@ jobs:
      with:
        name: dummy-artifact
    - name: Display file name
-     run: echo "${{env.FILE_NAME}}"
+     run: echo "file_name:${{ needs.Run-Data-Extractor.outputs.file_name }}"

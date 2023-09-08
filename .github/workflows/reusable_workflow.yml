@@ -19,6 +19,6 @@ jobs:
         with:
           name: dummy-artifact
           path: artifact.txt
-          
+
       - name: Display file name
-        run: echo "file_name:${{ needs.Run-Data-Extractor.outputs.file_name }}"
+        run: echo "file_name:${{ inputs.file_name }}"

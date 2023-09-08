@@ -18,6 +18,9 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+
+      - name: Set file name
+        run: echo "FILE_NAME=Meta" >> $GITHUB_ENV
                   
       - name: Run data extractor
         id: Run_data_extractor

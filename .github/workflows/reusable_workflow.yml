@@ -18,4 +18,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dummy-artifact
-          path: artifacts.txt
+          path: artifact.txt
+          
+      - name: Display file name
+        run: echo "file_name:${{ needs.Run-Data-Extractor.outputs.file_name }}"

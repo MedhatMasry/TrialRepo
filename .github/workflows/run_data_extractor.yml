@@ -72,3 +72,5 @@ jobs:
      uses: actions/download-artifact@v3
      with:
        name: dummy-artifact
+   - name: Display file name
+     run: echo "${{env.FILE_NAME}}"

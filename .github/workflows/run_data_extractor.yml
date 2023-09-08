@@ -15,6 +15,8 @@ jobs:
       matrix:
         operating-systems: [windows-latest, ubuntu-latest]
     runs-on: ${{ matrix.operating-systems }}
+    outputs:
+      file_name: ${{ env.FILE_NAME }}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3

@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set file name
-        run: echo "FILE_NAME=Meta" >> $GITHUB_ENV
+        run: echo "FILE_NAME=Meta_%Y_%M_%D-%H_%M_%S" >> $GITHUB_ENV
                   
       - name: Run data extractor
         id: Run_data_extractor

@@ -14,4 +14,5 @@ jobs:
           name: dummy-artifact
           path: artifact.txt
       - name: Display file name
-        run: echo "Your file name is : ${{env.FILE_NAME}}"
+        run: echo ${{env.FILE_NAME}}
+        

@@ -1,5 +1,11 @@
 name: reusable workflow
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      file_name:
+        description: file_name
+        required: true
+        type: string
 jobs:
     Print_dummy_message:
      runs-on: ubuntu-latest
@@ -12,7 +18,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dummy-artifact
-          path: artifact.txt
-      - name: Display file name
-        run: echo ${{env.FILE_NAME}}
-        
+          path: artifacts.txt

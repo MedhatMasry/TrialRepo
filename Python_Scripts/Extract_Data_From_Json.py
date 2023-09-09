@@ -26,7 +26,12 @@ def get_test_set_campaign_name_and_ids(test_set_path:str):
 
 def main(test_set_path:str):
    get_test_set_campaign_name_and_ids(test_set_path)    
-   
+   name=os.getenv("FILE_NAME","") 
+   if name:
+      print(f'{name}={name}')
+   else:
+      print('Name not given')              
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="The script helps to set the prerequisites for the Offline TraceAnalyzer tool."

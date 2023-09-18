@@ -28,7 +28,7 @@ jobs:
       - name: Set file name
         if: ${{ inputs.Set_file_name }}
         run: |
-          $current_datetime=Get-Date -Format 'yyyy-MM-dd_HH-mm-ss'
+          $current_datetime=$(date +'%Y-%m-%dT%H:%M:%S')
           echo "FILE_NAME=Meta_$current_datetime_$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
                   
       - name: Run data extractor
